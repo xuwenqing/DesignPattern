@@ -12,8 +12,8 @@ public class Main {
     @Test
     public void test() {
         Subject subject = new WeatherSubject();
-        subject.registerObserver(new Observer1());
-        subject.registerObserver(new Observer2());
+        Observer1 observer1 = new Observer1(subject);
+        Observer2 observer2 = new Observer2(subject);
         subject.notifyObeserver();
     }
 }
